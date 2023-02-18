@@ -42,18 +42,6 @@ except URLError as e:
 
 
 # streamlit.text(fruityvice_response.json())
-
-
-
-
-
-
-streamlit.stop()
-
-
-
-
-
 # my_cur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(), CURRENT_REGION()")
 
 
@@ -68,6 +56,7 @@ if streamlit.button('Get Fruit Load List'):
     my_data_rows = get_fruit_load_list()
     streamlit.dataframe(my_data_row)
 
+streamlit.stop()
 
 add_my_fruit = streamlit.text_input('What fruit would you like to add?')
 streamlit.text("Thanks for adding" +" "+ add_my_fruit)
